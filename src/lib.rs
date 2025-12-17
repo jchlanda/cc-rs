@@ -3148,7 +3148,7 @@ impl Build {
                         || target.os == "freebsd"
                         || target.os == "openbsd"
                         || target.os == "aix"
-                        || (target.os == "linux" && target.env == "ohos")
+                        || (target.os == "linux" && (target.env == "ohos" || target.env == "pauthtest"))
                         || target.os == "wasi"
                     {
                         Ok(Some(Cow::Borrowed(Path::new("c++"))))
